@@ -327,12 +327,11 @@ export default class LightningTestApi {
     const element = await this.browser.$(outputDivId);
     const ready = await element.waitUntil(
       async () => {
-        await element.waitForExist({ timeout });
-        text = await element.getAttribute('textContent');
-        return text && text.length > 0;
+        return await element.waitForExist({ timeout });
       },
       { timeout }
     );
+    text = await element.getHTML(false);
     if (!ready || !text) {
       throw new Error('Results not found on page or operation timed out.');
     }
