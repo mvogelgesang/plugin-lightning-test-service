@@ -1,5 +1,5 @@
 {
-  "name": "plugin-lightning-testing-service",
+  "name": "@mvogelgesang/plugin-lightning-testing-service",
   "description": "SFDX Pluging for Lightning Test Service",
   "version": "1.0.2",
   "author": "Salesforce @salesforce",
